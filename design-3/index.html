@@ -349,20 +349,27 @@ ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.c
                   </button>
                 </form>
 
-                {/* Help inside card */}
-                <div className="mt-6 pt-5 border-t border-slate-100 text-center">
-                  <p className="text-xs text-slate-400">
-                    Need help?{' '}
-                    <a href="tel:+16176272000" className="text-tufts-digital hover:underline">617-627-2000</a>
-                    {' · '}
-                    <a href="https://it.tufts.edu" className="text-tufts-digital hover:underline">it.tufts.edu</a>
-                  </p>
-                </div>
-
               </div>
             </div>
           </div>
         </div>
+
+
+        <div class="help-box">
+          <div class="help-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.14 1.18 2 2 0 012.12 0h3a2 2 0 012 1.72c.13 1 .37 1.97.72 2.9a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.18-1.18a2 2 0 012.11-.45c.93.35 1.9.59 2.9.72A2 2 0 0122 14.92z"></path>
+            </svg>
+          </div>
+          <div class="help-text">
+            <p>Need help? Contact the TTS Service Desk</p>
+            <div class="contacts">
+              <a href="tel:+16176273376">617-627-3376</a>
+              <a href="mailto:it@tufts.edu">it@tufts.edu</a>
+            </div>
+          </div>
+        </div>
+
       );
     }
 
