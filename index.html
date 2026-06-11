@@ -4,53 +4,155 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tufts SSO Prototypes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #f5f5f5; color: #1a1a1a; padding: 60px 24px; }
-    h1 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
-    p.sub { font-size: 14px; color: #888; margin-bottom: 48px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; max-width: 860px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 950px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    p.sub {
+      font-size: 16px;
+      color: #64748b;
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
     a.card {
       display: block;
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 12px;
-      padding: 28px 24px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 28px;
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s ease;
+      position: relative;
     }
-    a.card:hover { border-color: #3172AE; box-shadow: 0 2px 12px rgba(49,114,174,0.1); }
-    .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #3172AE; margin-bottom: 8px; }
-    .title { font-size: 16px; font-weight: 500; margin-bottom: 6px; }
-    .desc { font-size: 13px; color: #888; }
-    .arrow { float: right; color: #ccc; font-size: 18px; }
+
+    a.card:hover {
+      transform: translateY(-6px);
+      border-color: #3172AE;
+      box-shadow: 0 14px 30px rgba(49, 114, 174, 0.15);
+    }
+
+    .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #3172AE;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #64748b;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-size: 20px;
+      color: #94a3b8;
+      transition: transform 0.2s ease;
+    }
+
+    a.card:hover .arrow {
+      transform: translateX(4px);
+      color: #3172AE;
+    }
   </style>
 </head>
-<body>
-  <h1>Tufts SSO — Design Prototypes</h1>
-  <p class="sub">Narrowed the initial 12 Designs into 3 we see are the best options based on feedback.</p>
 
-  <div class="grid">
-    <a class="card" href="design-1/index.html">
-      <span class="arrow">→</span>
-      <div class="label">Design 1</div>
-      <div class="title">Blue Background</div>
-      <div class="desc">This design used the blue backdrop and white cards in the middle</div>
-    </a>
-    <a class="card" href="design-2/index.html">
-      <span class="arrow">→</span>
-      <div class="label">Design 2</div>
-      <div class="title">White Background</div>
-      <div class="desc">This is the simplest of the designs, with a white background, and white cards in the middle as well.</div>
-    </a>
-    <a class="card" href="design-3/index.html">
-      <span class="arrow">→</span>
-      <div class="label">Design 3</div>
-      <div class="title">One Card</div>
-      <div class="desc">Style of using only one white card, rather than breaking it up. Logo in the card as well.</div>
-    </a>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>Tufts SSO Design Prototypes</h1>
+      <p class="sub">
+        We narrowed the original 12 concepts down to the three strongest options
+        based on stakeholder and user feedback.
+      </p>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="design-1/index.html">
+        <span class="arrow">→</span>
+        <div class="label">Design 1</div>
+        <div class="title">Blue Background</div>
+        <div class="desc">
+          Uses a blue backdrop with centered white cards to create visual contrast
+          and focus.
+        </div>
+      </a>
+
+      <a class="card" href="design-2/index.html">
+        <span class="arrow">→</span>
+        <div class="label">Design 2</div>
+        <div class="title">White Background</div>
+        <div class="desc">
+          The simplest approach with a clean white background and minimal visual
+          distractions.
+        </div>
+      </a>
+
+      <a class="card" href="design-3/index.html">
+        <span class="arrow">→</span>
+        <div class="label">Design 3</div>
+        <div class="title">Single Card Layout</div>
+        <div class="desc">
+          A unified card containing all content, including the Tufts branding,
+          for a focused experience.
+        </div>
+      </a>
+    </div>
   </div>
 </body>
 </html>
