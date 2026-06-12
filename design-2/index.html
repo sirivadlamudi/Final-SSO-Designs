@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tufts SSO Prototypes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px;
+    }
+    .container { width: 100%; max-width: 950px; }
+    .hero { text-align: center; margin-bottom: 48px; }
+    h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 12px; }
+    p.sub {
+      font-size: 16px;
+      color: #64748b;
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    a.card {
+      display: block;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 28px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    a.card:hover {
+      transform: translateY(-6px);
+      border-color: #3172AE;
+      box-shadow: 0 14px 30px rgba(49,114,174,0.15);
+    }
+    .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #3172AE;
+      margin-bottom: 10px;
+    }
+    .title { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+    .desc { font-size: 14px; line-height: 1.6; color: #64748b; }
+    .arrow {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-size: 20px;
+      color: #94a3b8;
+      transition: transform 0.2s ease;
+    }
+    a.card:hover .arrow { transform: translateX(4px); color: #3172AE; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>Tufts SSO Design Prototypes</h1>
+      <p class="sub">
+        Click a card below to preview the login page and error page designs.
+      </p>
+    </div>
+    <div class="grid">
 
+      <a class="card" href="login1/index.html">
+        <span class="arrow">→</span>
+        <div class="label">Page 1</div>
+        <div class="title">Sign In</div>
+        <div class="desc">
+          The main Tufts SSO login page with username and password fields.
+        </div>
+      </a>
+
+      <a class="card" href="error1/index.html">
+        <span class="arrow">→</span>
+        <div class="label">Page 2</div>
+        <div class="title">Error</div>
+        <div class="desc">
+          The error page shown when a session expires or a login attempt fails.
+        </div>
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>
